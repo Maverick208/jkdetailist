@@ -13,7 +13,7 @@
         color: #f5f5f5;
     }
 
-    /* 🟢 STICKY LOGO (TECHNICKÉ) */
+    /* 🟢 STICKY LOGO (VW) */
     .sticky-logo {
         position: fixed;
         top: 15px;
@@ -22,49 +22,35 @@
         z-index: 999;
         opacity: 0.95;
 
-        /* 🔥 FAKE ODSTRÁNENIE POZADIA */
         mix-blend-mode: lighten;
-        filter: contrast(1.1);
     }
 
+    /* ===== HEADER ===== */
     header {
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        position: relative;
-        overflow: hidden;
         background: linear-gradient(to bottom, #111, #000);
+        padding: 0 20px;
     }
 
-    .bg-logo {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url('Minimalist logo s Volkswagen Golf.png') center/contain no-repeat;
-        opacity: 0.05;
-        z-index: 0;
-    }
-
-    /* 🔥 HLAVNÉ LOGO */
+    /* 🔥 VEĽKÉ HERO LOGO */
     .main-logo {
-        width: 420px;
-        max-width: 85%;
-        z-index: 2;
-        opacity: 0.95;
+        width: 100%;
+        max-width: 1000px;
+        opacity: 0.9;
 
-        /* 🔥 FAKE ODSTRÁNENIE POZADIA */
         mix-blend-mode: lighten;
-        filter: contrast(1.1) brightness(1.1) drop-shadow(0 0 20px rgba(255,255,255,0.08));
+        filter: contrast(1.1) brightness(1.1);
     }
 
     p.motto {
         font-size: 1.2rem;
         color: #b5b5b5;
         margin-top: 20px;
-        z-index: 2;
     }
 
     .btn {
@@ -75,7 +61,6 @@
         color: #f5f5f5;
         text-decoration: none;
         transition: 0.3s;
-        z-index: 2;
     }
 
     .btn:hover {
@@ -138,9 +123,7 @@
         opacity: 0.9;
         margin-bottom: 10px;
 
-        /* 🔥 FAKE ODSTRÁNENIE POZADIA */
         mix-blend-mode: lighten;
-        filter: contrast(1.1);
     }
 
     @media (max-width: 768px) {
@@ -157,12 +140,13 @@
 
 <body>
 
+<!-- 🟢 STICKY LOGO -->
 <img class="sticky-logo" src="Logo _J.K Detailist_ s VW Golfom.png">
 
+<!-- ===== HEADER ===== -->
 <header>
 
-    <div class="bg-logo"></div>
-
+    <!-- 🔥 HLAVNÉ LOGO CEZ CELÚ ŠÍRKU -->
     <img class="main-logo" src="Minimalist logo s Volkswagen Golf.png">
 
     <p class="motto">
@@ -170,8 +154,10 @@
     </p>
 
     <a href="#contact" class="btn">Objednať termín</a>
+
 </header>
 
+<!-- ===== SLUŽBY ===== -->
 <section>
     <h2>SLUŽBY</h2>
 
@@ -200,6 +186,7 @@
     </div>
 </section>
 
+<!-- ===== GALÉRIA ===== -->
 <section>
     <h2>GALÉRIA</h2>
 
@@ -210,6 +197,7 @@
     </div>
 </section>
 
+<!-- ===== KONTAKT ===== -->
 <section id="contact">
     <h2>KONTAKT</h2>
 
@@ -221,6 +209,7 @@
     </p>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer>
 
     <img class="footer-logo" src="Logo _J.K Detailist_ s VW Golfom.png">
