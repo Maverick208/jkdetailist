@@ -20,7 +20,11 @@
         left: 15px;
         width: 70px;
         z-index: 999;
-        opacity: 0.9;
+        opacity: 0.95;
+
+        /* 🔥 FAKE ODSTRÁNENIE POZADIA */
+        mix-blend-mode: lighten;
+        filter: contrast(1.1);
     }
 
     header {
@@ -35,7 +39,6 @@
         background: linear-gradient(to bottom, #111, #000);
     }
 
-    /* 🔥 MINIMALIST LOGO POZADIE */
     .bg-logo {
         position: absolute;
         width: 100%;
@@ -45,13 +48,16 @@
         z-index: 0;
     }
 
-    /* 🔥 HLAVNÉ LOGO (VW GOLF 7.5 BRAND) */
+    /* 🔥 HLAVNÉ LOGO */
     .main-logo {
         width: 420px;
         max-width: 85%;
         z-index: 2;
         opacity: 0.95;
-        filter: drop-shadow(0 0 20px rgba(255,255,255,0.08));
+
+        /* 🔥 FAKE ODSTRÁNENIE POZADIA */
+        mix-blend-mode: lighten;
+        filter: contrast(1.1) brightness(1.1) drop-shadow(0 0 20px rgba(255,255,255,0.08));
     }
 
     p.motto {
@@ -129,8 +135,12 @@
 
     .footer-logo {
         width: 80px;
-        opacity: 0.8;
+        opacity: 0.9;
         margin-bottom: 10px;
+
+        /* 🔥 FAKE ODSTRÁNENIE POZADIA */
+        mix-blend-mode: lighten;
+        filter: contrast(1.1);
     }
 
     @media (max-width: 768px) {
@@ -147,15 +157,12 @@
 
 <body>
 
-<!-- 🟢 STICKY LOGO -->
 <img class="sticky-logo" src="Logo _J.K Detailist_ s VW Golfom.png">
 
 <header>
 
-    <!-- 🔥 BACKGROUND BRAND -->
     <div class="bg-logo"></div>
 
-    <!-- 🔥 HLAVNÉ LOGO (TVOJ VW GOLF 7.5 BRAND) -->
     <img class="main-logo" src="Minimalist logo s Volkswagen Golf.png">
 
     <p class="motto">
