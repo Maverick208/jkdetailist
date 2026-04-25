@@ -13,7 +13,16 @@
         color: #f5f5f5;
     }
 
-    /* ===== HEADER (BRAND HERO STYLE) ===== */
+    /* 🟢 STICKY LOGO (TECHNICKÉ) */
+    .sticky-logo {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        width: 70px;
+        z-index: 999;
+        opacity: 0.9;
+    }
+
     header {
         height: 100vh;
         display: flex;
@@ -21,31 +30,34 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        background: linear-gradient(to bottom, #111, #000);
         position: relative;
         overflow: hidden;
+        background: linear-gradient(to bottom, #111, #000);
     }
 
-    /* 🔥 VEĽKÉ LOGO NA POZADÍ */
-    .hero-logo {
-        width: 320px;
-        max-width: 80%;
-        opacity: 0.9;
-        margin-bottom: 20px;
-        filter: drop-shadow(0 0 10px rgba(255,255,255,0.15));
+    /* 🔥 MINIMALIST LOGO POZADIE */
+    .bg-logo {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('Minimalist logo s Volkswagen Golf.png') center/contain no-repeat;
+        opacity: 0.05;
+        z-index: 0;
     }
 
-    h1 {
-        font-size: 3rem;
-        letter-spacing: 3px;
-        margin: 0;
+    /* 🔥 HLAVNÉ LOGO (VW GOLF 7.5 BRAND) */
+    .main-logo {
+        width: 420px;
+        max-width: 85%;
         z-index: 2;
+        opacity: 0.95;
+        filter: drop-shadow(0 0 20px rgba(255,255,255,0.08));
     }
 
     p.motto {
         font-size: 1.2rem;
         color: #b5b5b5;
-        margin-top: 10px;
+        margin-top: 20px;
         z-index: 2;
     }
 
@@ -128,10 +140,6 @@
         .gallery {
             grid-template-columns: 1fr;
         }
-
-        .hero-logo {
-            width: 240px;
-        }
     }
 </style>
 
@@ -139,19 +147,24 @@
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- 🟢 STICKY LOGO -->
+<img class="sticky-logo" src="Logo _J.K Detailist_ s VW Golfom.png">
+
 <header>
 
-    <!-- 🔥 HLAVNÉ VEĽKÉ LOGO (BEZ KRUHU) -->
-    <img class="hero-logo" src="Minimalist logo s Volkswagen Golf.png" alt="J.K Detailist logo">
+    <!-- 🔥 BACKGROUND BRAND -->
+    <div class="bg-logo"></div>
 
-    <h1>J.K Detailist</h1>
-    <p class="motto">Precíznosť v detaile poháňaná vášňou k autám.</p>
+    <!-- 🔥 HLAVNÉ LOGO (TVOJ VW GOLF 7.5 BRAND) -->
+    <img class="main-logo" src="Minimalist logo s Volkswagen Golf.png">
+
+    <p class="motto">
+        Precíznosť v detaile poháňaná vášňou k autám.
+    </p>
 
     <a href="#contact" class="btn">Objednať termín</a>
 </header>
 
-<!-- ===== SLUŽBY ===== -->
 <section>
     <h2>SLUŽBY</h2>
 
@@ -180,7 +193,6 @@
     </div>
 </section>
 
-<!-- ===== GALÉRIA ===== -->
 <section>
     <h2>GALÉRIA</h2>
 
@@ -191,7 +203,6 @@
     </div>
 </section>
 
-<!-- ===== KONTAKT ===== -->
 <section id="contact">
     <h2>KONTAKT</h2>
 
@@ -203,7 +214,6 @@
     </p>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
 
     <img class="footer-logo" src="Logo _J.K Detailist_ s VW Golfom.png">
