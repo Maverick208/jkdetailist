@@ -3,163 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JK Detailist | Auto Detailing</title>
+<title>J.K Detailist</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #0f0f0f;
-        color: #f5f5f5;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+}
 
-    header {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: linear-gradient(to bottom, #111, #000);
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #1a1a1a, #0a0a0a);
+}
 
-    h1 {
-        font-size: 3rem;
-        letter-spacing: 3px;
-        margin: 0;
-    }
+.hero h1 {
+  font-size: 72px;
+  letter-spacing: 5px;
+  margin: 0;
+}
 
-    p.motto {
-        font-size: 1.2rem;
-        color: #b5b5b5;
-        margin-top: 10px;
-    }
+.hero p {
+  color: #aaa;
+  font-size: 18px;
+  margin-top: 10px;
+}
 
-    .btn {
-        margin-top: 25px;
-        padding: 12px 25px;
-        border: 1px solid #f5f5f5;
-        background: transparent;
-        color: #f5f5f5;
-        text-decoration: none;
-        transition: 0.3s;
-    }
+.buttons {
+  margin-top: 30px;
+}
 
-    .btn:hover {
-        background: #f5f5f5;
-        color: #000;
-    }
+.btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border: 1px solid #555;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  border-radius: 6px;
+}
 
-    section {
-        padding: 80px 20px;
-        max-width: 900px;
-        margin: auto;
-    }
+.btn:hover {
+  background: white;
+  color: black;
+}
 
-    h2 {
-        text-align: center;
-        margin-bottom: 40px;
-        letter-spacing: 2px;
-    }
+/* SECTIONS */
+section {
+  padding: 100px 20px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    .services {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-left: 3px solid #666;
+  padding-left: 10px;
+}
 
-    .card {
-        background: #1a1a1a;
-        padding: 20px;
-        border-left: 3px solid #ffffff;
-    }
+.card {
+  background: #111;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
 
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
-    }
-
-    .gallery div {
-        height: 120px;
-        background: #222;
-    }
-
-    footer {
-        text-align: center;
-        padding: 40px;
-        font-size: 0.9rem;
-        color: #888;
-        border-top: 1px solid #222;
-    }
-
-    @media (max-width: 768px) {
-        .services {
-            grid-template-columns: 1fr;
-        }
-        .gallery {
-            grid-template-columns: 1fr;
-        }
-    }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 14px;
+}
 </style>
 
 </head>
 
 <body>
 
-<header>
-    <h1>JK DETAILIST</h1>
-    <p class="motto">Precíznosť v detaile poháňaná vášňou k autám.</p>
-    <a href="#contact" class="btn">Objednať termín</a>
-</header>
+<div class="hero">
+  <h1>J.K Detailist</h1>
+  <p>Precision. Clean. Perfection.</p>
+  <p>Premium auto detailing in Košice</p>
+
+  <div class="buttons">
+    <a href="#services" class="btn">Služby</a>
+    <a href="#contact" class="btn">Kontakt</a>
+  </div>
+</div>
 
 <section>
-    <h2>SLUŽBY</h2>
-    <div class="services">
-
-        <div class="card">
-            <h3>Exteriér Detail</h3>
-            <p>Hĺbkové čistenie, dekontaminácia a lesk laku.</p>
-        </div>
-
-        <div class="card">
-            <h3>Interiér Detail</h3>
-            <p>Kompletné čistenie interiéru s dôrazom na detail.</p>
-        </div>
-
-        <div class="card">
-            <h3>Leštenie Laku</h3>
-            <p>Obnova lesku a odstránenie jemných škrabancov.</p>
-        </div>
-
-        <div class="card">
-            <h3>Ochrana Laku</h3>
-            <p>Vosk / sealant / keramická ochrana.</p>
-        </div>
-
-    </div>
+  <h2>O nás</h2>
+  <div class="card">
+    J.K Detailist je prémiové detailing štúdio v Košiciach.
+    Každé auto berieme ako projekt – nie ako rýchle umytie.
+    Dôraz kladieme na detail, čistotu a dlhodobý výsledok.
+  </div>
 </section>
 
-<section>
-    <h2>GALÉRIA</h2>
-    <div class="gallery">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+<section id="services">
+  <h2>Služby</h2>
+
+  <div class="card">Exteriér detailing</div>
+  <div class="card">Interiér deep cleaning</div>
+  <div class="card">Dekontaminácia laku</div>
+  <div class="card">Keramická ochrana</div>
 </section>
 
 <section id="contact">
-    <h2>KONTAKT</h2>
-    <p style="text-align:center;">
-        📍 Košice, Slovensko<br>
-        📞 +421 XXX XXX XXX<br>
-        📩 Instagram: @jkdetailist
-    </p>
+  <h2>Kontakt</h2>
+
+  <div class="card">
+    📞 +421 911 618 704<br>
+    📧 j.k.detailist@gmail.com<br>
+    📍 Košice
+  </div>
 </section>
 
 <footer>
-    © 2026 JK Detailist — Auto Detailing & Štýl
+  © 2026 J.K Detailist – All rights reserved
 </footer>
 
 </body>
