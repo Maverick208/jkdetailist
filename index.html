@@ -13,6 +13,7 @@
         color: #f5f5f5;
     }
 
+    /* ===== HEADER (BRAND HERO STYLE) ===== */
     header {
         height: 100vh;
         display: flex;
@@ -21,18 +22,31 @@
         align-items: center;
         text-align: center;
         background: linear-gradient(to bottom, #111, #000);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* 🔥 VEĽKÉ LOGO NA POZADÍ */
+    .hero-logo {
+        width: 320px;
+        max-width: 80%;
+        opacity: 0.9;
+        margin-bottom: 20px;
+        filter: drop-shadow(0 0 10px rgba(255,255,255,0.15));
     }
 
     h1 {
         font-size: 3rem;
         letter-spacing: 3px;
         margin: 0;
+        z-index: 2;
     }
 
     p.motto {
         font-size: 1.2rem;
         color: #b5b5b5;
         margin-top: 10px;
+        z-index: 2;
     }
 
     .btn {
@@ -43,6 +57,7 @@
         color: #f5f5f5;
         text-decoration: none;
         transition: 0.3s;
+        z-index: 2;
     }
 
     .btn:hover {
@@ -72,6 +87,12 @@
         background: #1a1a1a;
         padding: 20px;
         border-left: 3px solid #ffffff;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        background: #222;
     }
 
     .gallery {
@@ -80,9 +101,10 @@
         gap: 10px;
     }
 
-    .gallery div {
+    .gallery img {
+        width: 100%;
         height: 120px;
-        background: #222;
+        object-fit: cover;
     }
 
     footer {
@@ -93,12 +115,22 @@
         border-top: 1px solid #222;
     }
 
+    .footer-logo {
+        width: 80px;
+        opacity: 0.8;
+        margin-bottom: 10px;
+    }
+
     @media (max-width: 768px) {
         .services {
             grid-template-columns: 1fr;
         }
         .gallery {
             grid-template-columns: 1fr;
+        }
+
+        .hero-logo {
+            width: 240px;
         }
     }
 </style>
@@ -107,14 +139,22 @@
 
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
-    <h1>J.K DETAILIST</h1>
+
+    <!-- 🔥 HLAVNÉ VEĽKÉ LOGO (BEZ KRUHU) -->
+    <img class="hero-logo" src="Minimalist logo s Volkswagen Golf.png" alt="J.K Detailist logo">
+
+    <h1>J.K Detailist</h1>
     <p class="motto">Precíznosť v detaile poháňaná vášňou k autám.</p>
+
     <a href="#contact" class="btn">Objednať termín</a>
 </header>
 
+<!-- ===== SLUŽBY ===== -->
 <section>
     <h2>SLUŽBY</h2>
+
     <div class="services">
 
         <div class="card">
@@ -140,17 +180,21 @@
     </div>
 </section>
 
+<!-- ===== GALÉRIA ===== -->
 <section>
     <h2>GALÉRIA</h2>
+
     <div class="gallery">
-        <div></div>
-        <div></div>
-        <div></div>
+        <img src="car1.jpg">
+        <img src="car2.jpg">
+        <img src="car3.jpg">
     </div>
 </section>
 
+<!-- ===== KONTAKT ===== -->
 <section id="contact">
     <h2>KONTAKT</h2>
+
     <p style="text-align:center;">
         📍 Košice, Slovensko<br>
         📞 +421 XXX XXX XXX<br>
@@ -159,8 +203,13 @@
     </p>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer>
-    © 2026 J.K Detailist — Auto Detailing & Štýl
+
+    <img class="footer-logo" src="Logo _J.K Detailist_ s VW Golfom.png">
+
+    <div>© 2026 J.K Detailist — Auto Detailing & Štýl</div>
+
 </footer>
 
 </body>
